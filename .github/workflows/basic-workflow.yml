@@ -39,3 +39,12 @@ jobs:
       - name: Run only if PR
         if: ${{ github.event_name == 'pull_request' }}
         run: echo Hello, from the PR!
+
+
+  deployment:
+      runs-on: ubuntu-latest
+      environment: DEV
+      steps:
+        - name: deployment steps
+          run: echo Hello, from the deployment!
+          # ...deployment-specific steps
